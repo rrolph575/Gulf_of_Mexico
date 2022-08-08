@@ -1,0 +1,3 @@
+==> 2022-08-08 11:08:30 <==
+# cmd: /nopt/nrel/apps/anaconda/mini_4.9.2/bin/conda create --prefix ./gulf_of_mexico_env
+# conda version: 4.10.1
