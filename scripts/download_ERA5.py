@@ -20,22 +20,26 @@ from datetime import time
 
 
 # Specify path that the ERA5 data should be saved to
-data_path = '/shared-projects/rev/projects/goMexico/data/ERA5'
+#data_path = '/shared-projects/rev/projects/goMexico/data/ERA5'
+data_path = '/projects/boemgom/data/ERA5/'
+
+# Specify sitename
+sitename = 'gulf_of_mexico'
 
 # Specify months
 month_start = 1
 month_end = 12 # Inclusive
 
 # Specify lat and lon bounds
-north_lat = 
-west_lon = 
-south_lat = 
-east_lon = 
+north_lat = 30.5 
+west_lon = 98
+south_lat = 25.5
+east_lon = 86.25
 
 
 c = cdsapi.Client()
 
-def download_ERA5(year, month_start, month_end, data_path, north_lat, west_lon, south_lat, east_lon):
+def download_ERA5(sitename, year, month_start, month_end, data_path, north_lat, west_lon, south_lat, east_lon):
     
     # Convert inputs into the format needed for cdsapi
     year_str = ['{0}'.format(year)
