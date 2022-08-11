@@ -17,7 +17,7 @@ import cdsapi
 import numpy as np
 import pandas as pd
 from datetime import time
-
+import os
 
 # Specify path that the ERA5 data should be saved to
 #data_path = '/shared-projects/rev/projects/goMexico/data/ERA5'
@@ -36,42 +36,43 @@ west_lon = 98
 south_lat = 25.5
 east_lon = 86.25
 
-
 c = cdsapi.Client()
 
 def download_ERA5(sitename, year, month_start, month_end, data_path, north_lat, west_lon, south_lat, east_lon):
-    
-    # Convert inputs into the format needed for cdsapi
-    year_str = ['{0}'.format(year)
-    months = np.arange(month_start,month_end+1)
-    months_str = ['{0}'.format(month).zfill(2) for month in months]
-    days = np.arange(1,32)
-    days_str = ['{0}'.format(day).zfill(2) for day in days]
-    date_range = pd.date_range('00:00', '23:00', freq='h')
-    hours_str = date_range.strftime("%H:%M:%S").to_list()
-    
-    grb_out_filename = data_path + sitename + '.grib'
-    
-    # Call cdsapi
-    c.retrieve(
-        'reanalysis-era5-single-levels',
-        {
-             'product_type': 'reanalysis',
-             'format': 'grib',
-             'variable': [
-                 #'100m_u_component_of_wind',
-                 #'100m_v_component_of_wind',
-                 'significant_height_of_combined_wind_waves_and_swell',
-              ],
-             'year': year_str,
-             'month': months_str,
-             'day': days_str,
-             'time': hours_str,
-             'area': [
-                 north_lat, west_lon, south_lat, east_lon],
-        },
-        grb_out_filename)
+
+	# Convert inputs into the format needed for cdsapi
+	year_str = ['{0}'.format(year)]
+	print(year_str)
+	months = np.arange(month_start,month_end+1)
+	months_str = ['{0}'.format(month).zfill(2) for month in months]
+	print(months_str)
+	days = np.arange(1,32)
+	days_str = ['{0}'.format(day).zfill(2) for day in days]
+	date_range = pd.date_range('00:00', '23:00', freq='h')
+	hours_str = date_range.strftime("%H:%M:%S").to_list()
+   	
+	grb_out_filename = data_path + sitename + '_' + str(year) + '.grib'
+    	
+	# Call cdsapi
+	c.retrieve(
+		'reanalysis-era5-single-levels',
+		{
+		'product_type': 'reanalysis',
+		'format': 'grib',
+		'variable': [
+		#'100m_u_component_of_wind',
+		#'100m_v_component_of_wind',
+		'significant_height_of_combined_wind_waves_and_swell',
+		],
+		'year': year_str,
+		'month': months_str,
+		'day': days_str,
+		'time': hours_str,
+		'area': [
+		north_lat, west_lon, south_lat, east_lon],
+		},
+		grb_out_filename)
 
 	return 'ERA5 data is now saved in ' + grb_out_filename
 
-#download_ERA5(year, month_start, month_end, sitename, north_lat, west_lon, south_lat, east_lon)
+download_ERA5(sitename, os.environ["year"], month_start, month_end, data_path, north_lat, west_lon, south_lat, east_lon)
