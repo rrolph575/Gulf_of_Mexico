@@ -1,0 +1,6 @@
+2011
+2022-08-15 13:46:19,000 INFO Welcome to the CDS
+2022-08-15 13:46:19,000 INFO Sending request to https://cds.climate.copernicus.eu/api/v2/resources/reanalysis-era5-single-levels
+2022-08-15 13:46:19,219 INFO Request is queued
+2022-08-15 13:46:20,371 INFO Request is running
+slurmstepd: error: *** JOB 9897477 ON r1i7n13 CANCELLED AT 2022-08-15T13:53:18 ***

@@ -1,0 +1,43 @@
+2011
+2022-08-15 13:54:41,780 INFO Welcome to the CDS
+2022-08-15 13:54:41,780 INFO Sending request to https://cds.climate.copernicus.eu/api/v2/resources/reanalysis-era5-single-levels
+2022-08-15 13:54:41,953 INFO Request is queued
+2022-08-15 13:57:34,729 INFO Request is completed
+2022-08-15 13:57:34,729 INFO Downloading https://download-0011-clone.copernicus-climate.eu/cache-compute-0011/cache/data6/adaptor.mars.internal-1660592779.291846-8548-6-c4e3ccee-1a95-482a-a64b-7f0943a859c1.grib to /projects/boemgom/data/ERA5/gulf_of_mexico/100m_u_and_v/gulf_of_mexico_100m_u_and_v_2011.grib (980.4M)
+  0%|          | 0.00/980M [00:00<?, ?B/s]                                          Data is being downloaded to /projects/boemgom/data/ERA5/gulf_of_mexico/100m_u_and_v/
+['2011']
+['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12']
+Traceback (most recent call last):
+  File "/home/rrolph/gulf_of_mexico/scripts/download_ERA5.py", line 80, in <module>
+    download_ERA5(sitename, varnames, os.environ["year"], month_start, month_end, data_path, north_lat, west_lon, south_lat, east_lon)
+  File "/home/rrolph/gulf_of_mexico/scripts/download_ERA5.py", line 59, in download_ERA5
+    c.retrieve(
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/api.py", line 350, in retrieve
+    result.download(target)
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/api.py", line 173, in download
+    return self._download(self.location, self.content_length, target)
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/api.py", line 132, in _download
+    with open(target, mode) as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/projects/boemgom/data/ERA5/gulf_of_mexico/100m_u_and_v/gulf_of_mexico_100m_u_and_v_2011.grib'
+2012
+2022-08-15 13:57:36,819 INFO Welcome to the CDS
+2022-08-15 13:57:36,820 INFO Sending request to https://cds.climate.copernicus.eu/api/v2/resources/reanalysis-era5-single-levels
+2022-08-15 13:57:36,993 INFO Request is queued
+2022-08-15 13:57:38,137 INFO Request is running
+2022-08-15 14:07:58,715 INFO Request is completed
+2022-08-15 14:07:58,716 INFO Downloading https://download-0019.copernicus-climate.eu/cache-compute-0019/cache/data5/adaptor.mars.internal-1660593457.0790508-5603-12-8b02a41e-ce60-4113-90eb-fb4986b6a5c2.grib to /projects/boemgom/data/ERA5/gulf_of_mexico/100m_u_and_v/gulf_of_mexico_100m_u_and_v_2012.grib (983.1M)
+  0%|          | 0.00/983M [00:00<?, ?B/s]                                          Data is being downloaded to /projects/boemgom/data/ERA5/gulf_of_mexico/100m_u_and_v/
+['2012']
+['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12']
+Traceback (most recent call last):
+  File "/home/rrolph/gulf_of_mexico/scripts/download_ERA5.py", line 80, in <module>
+    download_ERA5(sitename, varnames, os.environ["year"], month_start, month_end, data_path, north_lat, west_lon, south_lat, east_lon)
+  File "/home/rrolph/gulf_of_mexico/scripts/download_ERA5.py", line 59, in download_ERA5
+    c.retrieve(
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/api.py", line 350, in retrieve
+    result.download(target)
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/api.py", line 173, in download
+    return self._download(self.location, self.content_length, target)
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/api.py", line 132, in _download
+    with open(target, mode) as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/projects/boemgom/data/ERA5/gulf_of_mexico/100m_u_and_v/gulf_of_mexico_100m_u_and_v_2012.grib'

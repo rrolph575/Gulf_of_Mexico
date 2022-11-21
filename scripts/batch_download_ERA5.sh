@@ -18,8 +18,7 @@ module purge
 module load conda
 conda activate /home/rrolph/gulf_of_mexico/gulf_of_mexico_env
 
-#for year in {1992..2021}
-for year in {2011..2021}
+for year in {1992..2021}
 do
 	echo ${year}
 	export year=$year

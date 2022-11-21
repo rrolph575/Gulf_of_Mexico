@@ -19,12 +19,14 @@ import pandas as pd
 from datetime import time
 import os
 
+# Specify sitename and variables
+sitename = 'gulf_of_mexico'
+varnames='100m_u_and_v' # change the long varname in the c.retreive functions below, depending on how many there are.
+
 # Specify path that the ERA5 data should be saved to
 #data_path = '/shared-projects/rev/projects/goMexico/data/ERA5'
-data_path = '/projects/boemgom/data/ERA5/'
-
-# Specify sitename
-sitename = 'gulf_of_mexico'
+data_path = '/projects/boemgom/data/ERA5/' + varnames + '/grib/'
+print('Data is being downloaded to ' + data_path)
 
 # Specify months
 month_start = 1
@@ -38,7 +40,7 @@ east_lon = 86.25
 
 c = cdsapi.Client()
 
-def download_ERA5(sitename, year, month_start, month_end, data_path, north_lat, west_lon, south_lat, east_lon):
+def download_ERA5(sitename, varnames, year, month_start, month_end, data_path, north_lat, west_lon, south_lat, east_lon):
 
 	# Convert inputs into the format needed for cdsapi
 	year_str = ['{0}'.format(year)]
@@ -51,7 +53,7 @@ def download_ERA5(sitename, year, month_start, month_end, data_path, north_lat, 
 	date_range = pd.date_range('00:00', '23:00', freq='h')
 	hours_str = date_range.strftime("%H:%M:%S").to_list()
    	
-	grb_out_filename = data_path + sitename + '_' + str(year) + '.grib'
+	grb_out_filename = data_path + sitename + '_' + varnames + '_' + str(year) + '.grib'
     	
 	# Call cdsapi
 	c.retrieve(
@@ -60,9 +62,9 @@ def download_ERA5(sitename, year, month_start, month_end, data_path, north_lat, 
 		'product_type': 'reanalysis',
 		'format': 'grib',
 		'variable': [
-		#'100m_u_component_of_wind',
-		#'100m_v_component_of_wind',
-		'significant_height_of_combined_wind_waves_and_swell',
+		'100m_u_component_of_wind',
+		'100m_v_component_of_wind',
+		#'significant_height_of_combined_wind_waves_and_swell',
 		],
 		'year': year_str,
 		'month': months_str,
@@ -75,4 +77,4 @@ def download_ERA5(sitename, year, month_start, month_end, data_path, north_lat, 
 
 	return 'ERA5 data is now saved in ' + grb_out_filename
 
-download_ERA5(sitename, os.environ["year"], month_start, month_end, data_path, north_lat, west_lon, south_lat, east_lon)
+download_ERA5(sitename, varnames, os.environ["year"], month_start, month_end, data_path, north_lat, west_lon, south_lat, east_lon)
