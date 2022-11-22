@@ -14,24 +14,30 @@ from cdo import *
 cdo = Cdo()
 import geopandas as gpd
  
-## Specify site/filename to create windrose from
-
+## Specify filepaths
 sitename = 'gulf_of_mexico'
-# lat =
-# lon =
-year = 1992
-
 datapath = '/projects/boemgom/data/ERA5/swh_combined_windwaves_swell/grib/'
 
-## Specify ifile/ofile names
-swh_data_ifile_grb = datapath + sitename + '_' + str(year) + '.grib'
-swh_data_ofile_grb = datapath + 'annual_mean/' + sitename + '_' + str(year) + '_swh_yearmean.grib'
+# Take annual average
+# this is commented because it was already done.
+'''for year in np.arange(1992,2022):
+	swh_data_ifile_grb = datapath + sitename + '_' + str(year) + '.grib'
+	swh_data_ofile_grb = datapath + 'annual_mean/' + sitename + '_' + str(year) + '_swh.grib'
+	
+	# Take the annual average swh
+	cdo.yearmean(input=swh_data_ifile_grb,output=swh_data_ofile_grb)
+	print(year)
+'''
 
-# Take the annual average swh
-cdo.yearmean(input=swh_data_ifile_grb,output=swh_data_ofile_grb)
+# take the average swh across all available years
+#xr.open_mfdataset(swh_data_ifiles_grb, parallel=True)  ## this took up too much disk space
+# cdo  timmean  -cat '*.nc'  mean.nc  # this bash command was put in a .sh where the annual average swh files are
+# cdo.timmean(input=swh_data_ifiles_grb, output=swh_data_ofile_grb) # this does not work
+
+time_period_mean_swh_ifile = '/projects/boemgom/data/ERA5/swh_combined_windwaves_swell/grib/annual_mean/mean_1992thru2021.grib'
 
 ## Open dataset
-ds = cfgrib.open_datasets(swh_data_ofile_grb)
+ds = cfgrib.open_datasets(time_period_mean_swh_ifile)
 ds_waves = ds[0]
 ds_waves_data = ds_waves['swh'].values
 ds_lats = ds[0].latitude.values
