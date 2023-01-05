@@ -18,7 +18,7 @@ import geopandas as gpd
 sitename = 'gulf_of_mexico'
 datapath = '/projects/boemgom/data/ERA5/swh_combined_windwaves_swell/grib/'
 
-# Take annual average
+# Take annual average from hourly data
 # this is commented because it was already done.
 '''for year in np.arange(1992,2022):
 	swh_data_ifile_grb = datapath + sitename + '_' + str(year) + '.grib'
@@ -34,7 +34,7 @@ datapath = '/projects/boemgom/data/ERA5/swh_combined_windwaves_swell/grib/'
 # cdo  timmean  -cat '*.nc'  mean.nc  # this bash command was put in a .sh where the annual average swh files are
 # cdo.timmean(input=swh_data_ifiles_grb, output=swh_data_ofile_grb) # this does not work
 
-time_period_mean_swh_ifile = '/projects/boemgom/data/ERA5/swh_combined_windwaves_swell/grib/annual_mean/mean_1992thru2021.grib'
+time_period_mean_swh_ifile = '/shared-projects/rev/projects/goMexico/data/mean_1992thru2021_swh.grib'
 
 ## Open dataset
 ds = cfgrib.open_datasets(time_period_mean_swh_ifile)
@@ -44,8 +44,6 @@ ds_lats = ds[0].latitude.values
 ds_lons = ds[0].longitude.values
 
 points = gpd.read_file("/shared-projects/rev/projects/goMexico/data/vector/project_points.gpkg").to_crs(3174)
-#points['hs_average'] = hs
-#points.to_file("vector/project_points_hs.gpkg")
 
 
 
@@ -64,7 +62,8 @@ def geo_idx(dd, dd_array):
    geo_idx = (np.abs(dd_array - dd)).argmin()
    return geo_idx
 
-for i in np.arange(0,points.latitude.shape[0]):
+## commented below because already ran
+'''for i in np.arange(0,points.latitude.shape[0]):
 	print(i)
 	idx_lat = geo_idx(points.latitude[i], ds_lats)
 	idx_lon = geo_idx(points.longitude[i], ds_lons)
@@ -77,4 +76,4 @@ for i in np.arange(0,points.latitude.shape[0]):
 # save new points file that now includes swh
 points.to_file('/shared-projects/rev/projects/goMexico/data/vector/project_points_with_swh.gpkg')
 
-
+'''

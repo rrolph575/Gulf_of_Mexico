@@ -1,0 +1,180 @@
+2002
+Traceback (most recent call last):
+  File "/home/rrolph/gulf_of_mexico/scripts/download_ERA5.py", line 16, in <module>
+    import cdsapi
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/__init__.py", line 21, in <module>
+    from . import api
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/api.py", line 16, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+2003
+Traceback (most recent call last):
+  File "/home/rrolph/gulf_of_mexico/scripts/download_ERA5.py", line 16, in <module>
+    import cdsapi
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/__init__.py", line 21, in <module>
+    from . import api
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/api.py", line 16, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+2004
+Traceback (most recent call last):
+  File "/home/rrolph/gulf_of_mexico/scripts/download_ERA5.py", line 16, in <module>
+    import cdsapi
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/__init__.py", line 21, in <module>
+    from . import api
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/api.py", line 16, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+2005
+Traceback (most recent call last):
+  File "/home/rrolph/gulf_of_mexico/scripts/download_ERA5.py", line 16, in <module>
+    import cdsapi
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/__init__.py", line 21, in <module>
+    from . import api
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/api.py", line 16, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+2006
+Traceback (most recent call last):
+  File "/home/rrolph/gulf_of_mexico/scripts/download_ERA5.py", line 16, in <module>
+    import cdsapi
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/__init__.py", line 21, in <module>
+    from . import api
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/api.py", line 16, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+2007
+Traceback (most recent call last):
+  File "/home/rrolph/gulf_of_mexico/scripts/download_ERA5.py", line 16, in <module>
+    import cdsapi
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/__init__.py", line 21, in <module>
+    from . import api
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/api.py", line 16, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+2008
+Traceback (most recent call last):
+  File "/home/rrolph/gulf_of_mexico/scripts/download_ERA5.py", line 16, in <module>
+    import cdsapi
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/__init__.py", line 21, in <module>
+    from . import api
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/api.py", line 16, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+2009
+Traceback (most recent call last):
+  File "/home/rrolph/gulf_of_mexico/scripts/download_ERA5.py", line 16, in <module>
+    import cdsapi
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/__init__.py", line 21, in <module>
+    from . import api
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/api.py", line 16, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+2010
+Traceback (most recent call last):
+  File "/home/rrolph/gulf_of_mexico/scripts/download_ERA5.py", line 16, in <module>
+    import cdsapi
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/__init__.py", line 21, in <module>
+    from . import api
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/api.py", line 16, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+2011
+Traceback (most recent call last):
+  File "/home/rrolph/gulf_of_mexico/scripts/download_ERA5.py", line 16, in <module>
+    import cdsapi
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/__init__.py", line 21, in <module>
+    from . import api
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/api.py", line 16, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+2012
+Traceback (most recent call last):
+  File "/home/rrolph/gulf_of_mexico/scripts/download_ERA5.py", line 16, in <module>
+    import cdsapi
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/__init__.py", line 21, in <module>
+    from . import api
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/api.py", line 16, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+2013
+Traceback (most recent call last):
+  File "/home/rrolph/gulf_of_mexico/scripts/download_ERA5.py", line 16, in <module>
+    import cdsapi
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/__init__.py", line 21, in <module>
+    from . import api
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/api.py", line 16, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+2014
+Traceback (most recent call last):
+  File "/home/rrolph/gulf_of_mexico/scripts/download_ERA5.py", line 16, in <module>
+    import cdsapi
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/__init__.py", line 21, in <module>
+    from . import api
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/api.py", line 16, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+2015
+Traceback (most recent call last):
+  File "/home/rrolph/gulf_of_mexico/scripts/download_ERA5.py", line 16, in <module>
+    import cdsapi
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/__init__.py", line 21, in <module>
+    from . import api
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/api.py", line 16, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+2016
+Traceback (most recent call last):
+  File "/home/rrolph/gulf_of_mexico/scripts/download_ERA5.py", line 16, in <module>
+    import cdsapi
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/__init__.py", line 21, in <module>
+    from . import api
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/api.py", line 16, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+2017
+Traceback (most recent call last):
+  File "/home/rrolph/gulf_of_mexico/scripts/download_ERA5.py", line 16, in <module>
+    import cdsapi
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/__init__.py", line 21, in <module>
+    from . import api
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/api.py", line 16, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+2018
+Traceback (most recent call last):
+  File "/home/rrolph/gulf_of_mexico/scripts/download_ERA5.py", line 16, in <module>
+    import cdsapi
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/__init__.py", line 21, in <module>
+    from . import api
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/api.py", line 16, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+2019
+Traceback (most recent call last):
+  File "/home/rrolph/gulf_of_mexico/scripts/download_ERA5.py", line 16, in <module>
+    import cdsapi
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/__init__.py", line 21, in <module>
+    from . import api
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/api.py", line 16, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+2020
+Traceback (most recent call last):
+  File "/home/rrolph/gulf_of_mexico/scripts/download_ERA5.py", line 16, in <module>
+    import cdsapi
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/__init__.py", line 21, in <module>
+    from . import api
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/api.py", line 16, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+2021
+Traceback (most recent call last):
+  File "/home/rrolph/gulf_of_mexico/scripts/download_ERA5.py", line 16, in <module>
+    import cdsapi
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/__init__.py", line 21, in <module>
+    from . import api
+  File "/home/rrolph/.local/lib/python3.9/site-packages/cdsapi/api.py", line 16, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'

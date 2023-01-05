@@ -21,11 +21,10 @@ import os
 
 # Specify sitename and variables
 sitename = 'gulf_of_mexico'
-varnames='100m_u_and_v' # change the long varname in the c.retreive functions below, depending on how many there are.
+varnames='100m_u_and_v_swh' # change the long varname in the c.retreive functions below, depending on how many there are.
 
 # Specify path that the ERA5 data should be saved to
-#data_path = '/shared-projects/rev/projects/goMexico/data/ERA5'
-data_path = '/projects/boemgom/data/ERA5/' + varnames + '/grib/'
+data_path = '/shared-projects/rev/projects/goMexico/data/ERA5/'
 print('Data is being downloaded to ' + data_path)
 
 # Specify months
@@ -34,9 +33,9 @@ month_end = 12 # Inclusive
 
 # Specify lat and lon bounds
 north_lat = 30.5 
-west_lon = 98
+west_lon = -98 # this should be from -180 to 180
 south_lat = 25.5
-east_lon = 86.25
+east_lon = -86.25  # this should be from -180 (western) to 180
 
 c = cdsapi.Client()
 
@@ -64,7 +63,7 @@ def download_ERA5(sitename, varnames, year, month_start, month_end, data_path, n
 		'variable': [
 		'100m_u_component_of_wind',
 		'100m_v_component_of_wind',
-		#'significant_height_of_combined_wind_waves_and_swell',
+		'significant_height_of_combined_wind_waves_and_swell',
 		],
 		'year': year_str,
 		'month': months_str,
